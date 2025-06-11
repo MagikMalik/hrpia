@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HRPIA</title>
+  <style>
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { background-color: #f4f4f4; }
+  </style>
+</head>
+<body>
+  <h1>HRPIA</h1>
+  <input type="date" id="matchDate" />
+  <button onclick="loadMatches()">Load Matches</button>
+  <table id="matchTable">
+    <thead>
+      <tr><th>Match</th><th>Odds</th><th>Prediction</th><th>Action</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script src="app.js"></script>
+</body>
+</html>
