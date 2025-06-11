@@ -7,9 +7,9 @@ async function loadMatches() {
   tableBody.innerHTML = '';
   for (const match of matches) {
     const tr = document.createElement('tr');
-    const teams = `${match.home_team} vs ${match.away_team}`;
-    const odds = match.bookmakers && match.bookmakers[0] ? JSON.stringify(match.bookmakers[0].markets) : '';
-    tr.innerHTML = `<td>${teams}</td><td>${odds}</td><td id="pred-${match.id}"></td><td><button onclick="analyze('${match.id}', '${match.home_team}', '${match.away_team}', '${date}')">Analyze with AI</button></td>`;
+    const teams = `${match.homeTeam} vs ${match.awayTeam}`;
+    const odds = match.odds ? `1: ${match.odds["1"]} | X: ${match.odds["X"]} | 2: ${match.odds["2"]}` : '';
+    tr.innerHTML = `<td>${teams}</td><td>${odds}</td><td id="pred-${match.id}"></td><td><button onclick="analyze('${match.id}', '${match.homeTeam}', '${match.awayTeam}', '${date}')">Analyser avec l'IA</button></td>`;
     tableBody.appendChild(tr);
   }
   loadPredictions(date);
